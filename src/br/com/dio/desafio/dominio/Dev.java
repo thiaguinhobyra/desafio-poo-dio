@@ -5,6 +5,7 @@ import java.util.*;
 public class Dev {
     private String nome;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+    private Set<Bootcamp> bootcampsInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
     public void inscreverBootcamp(Bootcamp bootcamp){
