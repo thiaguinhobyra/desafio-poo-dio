@@ -10,6 +10,7 @@ public class Bootcamp {
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private Set<Bootcamp> bootcamps = new LinkedHashSet<>();
 
 
     public String getNome() {
@@ -46,6 +47,10 @@ public class Bootcamp {
 
     public Set<Conteudo> getConteudos() {
         return conteudos;
+    }
+
+    public Set<Bootcamp> getBootcamps() {
+        return bootcamps;
     }
 
     public void setConteudos(Set<Conteudo> conteudos) {

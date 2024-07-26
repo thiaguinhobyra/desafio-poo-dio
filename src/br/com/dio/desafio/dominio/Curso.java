@@ -1,6 +1,11 @@
 package br.com.dio.desafio.dominio;
 
-public class Curso extends Conteudo{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Curso extends Conteudo {
+
+
 
     private int cargaHoraria;
 
@@ -11,7 +16,6 @@ public class Curso extends Conteudo{
 
     public Curso() {
     }
-
 
     public int getCargaHoraria() {
         return cargaHoraria;

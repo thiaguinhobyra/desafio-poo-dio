@@ -10,6 +10,7 @@ public class Dev {
 
     public void inscreverBootcamp(Bootcamp bootcamp){
         this.conteudosInscritos.addAll(bootcamp.getConteudos());
+        this.bootcampsInscritos.addAll(bootcamp.getBootcamps());
         bootcamp.getDevsInscritos().add(this);
     }
 
@@ -55,6 +56,14 @@ public class Dev {
         this.conteudosInscritos = conteudosInscritos;
     }
 
+    public Set<Bootcamp> getBootcampsInscritos() {
+        return bootcampsInscritos;
+    }
+
+    public void setBootcampsInscritos(Set<Bootcamp> bootcampsInscritos) {
+        this.bootcampsInscritos = bootcampsInscritos;
+    }
+
     public Set<Conteudo> getConteudosConcluidos() {
         return conteudosConcluidos;
     }
@@ -68,11 +77,11 @@ public class Dev {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dev dev = (Dev) o;
-        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos) && Objects.equals(bootcampsInscritos, dev.bootcampsInscritos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos, bootcampsInscritos);
     }
 }

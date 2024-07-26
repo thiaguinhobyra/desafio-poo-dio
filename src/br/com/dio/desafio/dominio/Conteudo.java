@@ -1,6 +1,11 @@
 package br.com.dio.desafio.dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Conteudo {
+
+    public List<Conteudo> conteudos = new ArrayList<>();
 
     protected static final double XP_PADRAO = 10d;
 
@@ -9,6 +14,9 @@ public abstract class Conteudo {
 
     public abstract double calcularXp();
 
+    public List<Conteudo> getAllConteudos() {
+        return conteudos;
+    }
     public String getTitulo() {
         return titulo;
     }
